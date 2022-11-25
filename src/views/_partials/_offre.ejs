@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="card-header">
+      Offres:
+    </div>
+    <ul class="list-group list-group-flush">
+      <% if(offres != null) { %> 
+      <% Object.keys(offres).forEach(key => { %>
+        <li class="list-group-item"><%= offres[key].produitNom %> prix:<%=  offres[key].offre %>€</li>
+      <% }) %>
+      <% } else { %> 
+        <li class="list-group-item">Pas d'offre.</li>
+      <% } %>
+    </ul>
+</div>
